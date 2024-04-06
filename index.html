@@ -10,28 +10,33 @@
         font-size: 16px; /* Default font size */
     }
     .container {
-        max-width: 600px;
+        width: 100%;
+        max-width: 800px; /* Adjust max-width as needed */
         margin: 0 auto;
         text-align: left; /* Align other text to the left */
+        padding: 0 20px; /* Add padding to the container */
     }
     .certification {
         font-weight: bold;
         text-decoration: underline;
         text-align: center; /* Center "To Whom It May Concern" */
         font-size: 24px; /* Larger font size for certification */
+        margin-top: 20px; /* Adjust top margin */
     }
     .signature {
         float: right;
-        margin-top: 90px; /* Reduce top margin */
+        margin-top: 20px; /* Reduce top margin */
     }
     .top-image {
         width: 100%;
-        max-width: 650px;
-        margin-bottom: 40px;
+        margin-bottom: 20px; /* Adjust bottom margin */
     }
     .bottom-image {
-        width: 620px; /* Adjust image size as needed */
-        margin-top: 200px;
+        width: 100%; /* Adjust image size as needed */
+        max-width: 820px;
+        margin-top: 20px; /* Adjust top margin */
+        position: absolute;
+        bottom: 0;
     }
     p {
         font-size: 18px; /* Font size for paragraphs */
@@ -41,13 +46,37 @@
         margin: 5px 0 0; /* Adjust margin */
         font-size: 20px; /* Font size for "Managing Director" */
         line-height: 0.1; /* Line height for better readability */
-
     }
     .director-name {
         margin: 0; /* Adjust margin */
-        text-align: center;
+        text-align: right;
         font-size: 20px; /* Font size for director's name */
         line-height: 1.6; /* Line height for better readability */
+    }
+
+    /* Adjustments for printing */
+    @media print {
+        body {
+            font-size: 18px; /* Adjust font size for printing */
+        }
+        .container {
+            width: 100%;
+            max-width: 100%;
+            padding: 0; /* Remove padding for printing */
+        }
+        .certification {
+            margin-top: 40px; /* Adjust top margin for printing */
+            font-size: 18px; /* Adjust font size for printing */
+        }
+        .signature {
+            margin-top: 90px; /* Adjust top margin for printing */
+        }
+        p {
+            font-size: 18px; /* Adjust font size for printing */
+        }
+        .director-title, .director-name {
+            font-size: 20px; /* Adjust font size for printing */
+        }
     }
 </style>
 </head>
